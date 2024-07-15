@@ -1,0 +1,11 @@
+class BracketRemover:
+    def __init__(self,expression):
+        self.expression=expression
+    def remove_brackets(self):
+        brackets = ['(',')','[',']','{','}']
+        for bracket in brackets:
+            self.expression=self.expression.replace(bracket,"")
+        return self.expression
+expression=input()
+remove=BracketRemover(expression)
+print("String without brackets is:",remove.remove_brackets())
